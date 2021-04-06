@@ -1,9 +1,7 @@
 <!-- header -->
 <header>
   <h1 class="heading">
-    <a href="index.html">
-      CARAVAN
-    </a>
+    <%= link_to "CARAVAN", blogs_path %>
   </h1>
   <div class="social">
     <i class="fab fa-facebook-square"></i>
@@ -41,21 +39,22 @@
   <section class="blog">
     <h2 class="blog-heading">Recent Blogs</h2>
     <div class="blog-box">
-      
+
       <% @blog.each do |blog| %>
       <div class="blog-item">
         <div class="blog-image"><%= image_tag('img/forest.jpeg', class: 'blog-image') %></div>
-        
+
         <section class="blog-text" >
           <h3 class="blog-text-heading"> <%= link_to blog.title, blog_path(blog) %> </h3>
           <p class="blog-date"> <%= blog.created_at %> </p>
           <span class="category"> <%= blog.category %> </span>
         </section>
-        
+
       </div>
+
       <% end %>
-        
-      
+
+
       <div class="blog-item">
         <%= image_tag('img/forest.jpg', class: 'blog-image') %>
         <section class="blog-text">
@@ -70,13 +69,13 @@
           <span class="category">Nature</span>
         </section>
       </div>
-      
-      
-      
+
+
+
     </div>
-    
-    
-  
+
+
+
     <div class="pagination">
       <p><<</p>
       <p><</p>
